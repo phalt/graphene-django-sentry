@@ -34,7 +34,7 @@ setup(
     long_description=readme,
     include_package_data=True,
     keywords='GraphQL graphene django sentry',
-    name='graphene_django_sentry',
+    name='graphene-django-sentry',
     packages=find_packages(include=['graphene_django_sentry']),
     setup_requires=setup_requirements,
     test_suite='tests',

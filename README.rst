@@ -21,20 +21,20 @@ Works with:
 * graphene-django 2.2+
 
 
-.. image:: https://img.shields.io/pypi/v/graphene_django_sentry.svg
-        :target: https://pypi.org/project/graphene_django_sentry/
+.. image:: https://img.shields.io/pypi/v/graphene-django-sentry.svg
+        :target: https://pypi.org/project/graphene-django-sentry/
 
 .. image:: https://img.shields.io/pypi/pyversions/graphene_django_sentry.svg
         :target: https://pypi.org/project/graphene_django_sentry/
 
-.. image:: https://img.shields.io/pypi/l/graphene_django_sentry.svg
-        :target: https://pypi.org/project/graphene_django_sentry/
+.. image:: https://img.shields.io/pypi/l/graphene-django-sentry.svg
+        :target: https://pypi.org/project/graphene-django-sentry/
 
 .. image:: https://img.shields.io/pypi/status/graphene_django_sentry.svg
         :target: https://pypi.org/project/graphene_django_sentry/
 
-.. image:: https://circleci.com/gh/phalt/graphene_django_sentry/tree/master.svg?style=svg
-        :target: https://circleci.com/gh/phalt/graphene_django_sentry/tree/master
+.. image:: https://circleci.com/gh/phalt/graphene-django-sentry/tree/master.svg?style=svg
+        :target: https://circleci.com/gh/phalt/graphene-django-sentry/tree/master
 
 Installing the project is easy:
 
