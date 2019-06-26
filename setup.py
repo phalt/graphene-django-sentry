@@ -10,7 +10,8 @@ with open('README.rst') as readme_file:
 
 requirements = [
     'graphene_django==2.2.0',
-    'sentry-sdk==0.5.2',
+    'graphene-file-upload==1.2.2',
+    'sentry-sdk==0.9.2',
 ]
 
 setup_requirements = ['pytest-runner', ]

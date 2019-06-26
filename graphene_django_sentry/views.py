@@ -5,9 +5,10 @@
 
 import sentry_sdk
 from graphene_django.views import GraphQLView
+from graphene_file_upload.django import FileUploadGraphQLView
 
 
-class SentryGraphQLView(GraphQLView):
+class SentryGraphQLViewMixin(GraphQLView):
     def execute_graphql_request(self, *args, **kwargs):
         """Extract any exceptions and send them to Sentry"""
         result = super().execute_graphql_request(*args, **kwargs)
@@ -21,3 +22,12 @@ class SentryGraphQLView(GraphQLView):
                 sentry_sdk.capture_exception(error.original_error)
             except AttributeError:
                 sentry_sdk.capture_exception(error)
+
+
+class SentryGraphQLView(SentryGraphQLViewMixin, GraphQLView):
+    pass
+
+
+class SentryFileUploadGraphQLView(SentryGraphQLViewMixin,
+                                  FileUploadGraphQLView):
+    pass

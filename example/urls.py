@@ -1,7 +1,8 @@
 from django.conf.urls import url
 from django.views.decorators.csrf import csrf_exempt
 
-from graphene_django_sentry import SentryGraphQLView
+from graphene_django_sentry import SentryGraphQLView,\
+    SentryFileUploadGraphQLView
 
 from .schema import schema  # Your graphQL schema
 
@@ -10,5 +11,10 @@ urlpatterns = [
       r'^graphql',
       csrf_exempt(SentryGraphQLView.as_view(schema=schema)),
       name='graphql',
+    ),
+    url(
+      r'^file_graphql',
+      csrf_exempt(SentryFileUploadGraphQLView.as_view(schema=schema)),
+      name='file_graphql',
     ),
 ]
