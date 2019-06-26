@@ -42,7 +42,7 @@ Installing the project is easy:
 
     pip install graphene-django-sentry
 
-Full blown example:
+Example without file upload:
 
 .. code-block:: python
 
@@ -58,6 +58,26 @@ Full blown example:
           name='graphql',
       ),
   ]
+
+
+Example with graphene file upload:
+
+.. code-block:: python
+
+  # urls.py
+
+  from .schema import schema
+  from graphene_django_sentry.views import SentryFileUploadGraphQLView
+
+  urlpatterns = [
+      url(
+          r'^graphql',
+          csrf_exempt(SentryFileUploadGraphQLView.as_view(schema=schema)),
+          name='graphql',
+      ),
+  ]
+
+
 
 📖 What can I do?
 --------
