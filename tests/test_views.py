@@ -162,3 +162,12 @@ def test_execute_graphql_file_upload_request_raises_raw_graphql_exceptions(
         'Syntax error in GraphQL query'
     )
     mocked_capture_exception.assert_called_with(error)
+
+def test_graphiql_render(client: Client):
+    result = client.get(reverse('graphiql'), HTTP_ACCEPT='text/html')
+
+    assert result.status_code == OK
+
+    result = client.get(reverse('file_graphiql'), HTTP_ACCEPT='text/html')
+
+    assert result.status_code == OK

@@ -14,7 +14,19 @@ urlpatterns = [
     ),
     url(
       r'^file_graphql',
-      csrf_exempt(SentryFileUploadGraphQLView.as_view(schema=schema)),
+      csrf_exempt(
+          SentryFileUploadGraphQLView.as_view(schema=schema)),
       name='file_graphql',
+    ),
+    url(
+      r'^graphiql',
+      csrf_exempt(SentryGraphQLView.as_view(graphiql=True, schema=schema)),
+      name='graphiql',
+    ),
+    url(
+      r'^file_graphiql',
+      csrf_exempt(
+          SentryFileUploadGraphQLView.as_view(graphiql=True, schema=schema)),
+      name='file_graphiql',
     ),
 ]
