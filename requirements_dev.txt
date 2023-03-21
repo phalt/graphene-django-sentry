@@ -17,4 +17,4 @@ mkdocs==0.17.5
 
 django==2.1.6
 graphene_django==2.2.0
-sentry-sdk==0.5.2
+sentry-sdk==1.14.0
